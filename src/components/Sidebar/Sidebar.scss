@@ -1,0 +1,124 @@
+.nav-bar {
+    background: #181818;
+    width: 100px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    min-height: 500px;
+    overflow: auto;
+
+    .logo {
+        display: block;
+        padding: 8px 0;
+
+        .subLogo {
+            width: 100px;
+            height: 20px;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        img {
+            display: block;
+            margin: 8px auto;
+            width: 80px;
+            height: auto;
+        }
+    }
+
+    .icon {
+        color: #4d4d4e;
+    }
+
+    nav {
+        display: block;
+        text-align: center;
+        position: absolute;
+        height: 210px;
+        top: 50%;
+        margin-top: -250px;
+        width: 100%;
+
+        a {
+            font-size: 30px;
+            text-decoration: none;
+            display: block;
+            position: relative;
+            height: 51px;
+            line-height: 51px;
+
+            &:hover {
+                color: #6d33ff;
+
+                .icon {
+                    opacity: 0;
+                    transition: all 0.3s ease-out;
+                }
+
+                &:after {
+                    opacity: 1;
+                }
+            }
+
+            &:after {
+                content: '';
+                font-size: 15px;
+                letter-spacing: 2px;
+                position: absolute;
+                bottom: 0;
+                text-align: center;
+                display: block;
+                width: 100%;
+                opacity: 0;
+                transition: all 0.3s ease-out;
+            }
+
+            &:first-child {
+                &::after {
+                    content: 'home';
+                }
+            }
+
+            &:nth-child(2) {
+                &::after {
+                    content: 'about';
+                }
+            }
+
+            &:nth-child(3) {
+                &::after {
+                    content: 'contact';
+                }
+            }
+
+            &.active {
+                svg {
+                    color: #6d33ff;
+                }
+            }
+        }
+    }
+
+    ul {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        display: block;
+        list-style: none;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+
+        li {
+            a {
+                font-size: 30px;
+                color: #4d4d4e;
+
+                &:hover svg {
+                    color: #6d33ff;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,99 @@
+.wrap {
+    position: absolute;
+    top: 100px;
+    margin-left: 25px;
+    display: flex;
+}
+
+.location {
+    width: 100vh;
+    height: 80vh;
+    background-color: #6d33ff;
+}
+
+.contact-form {
+    width: 100%;
+
+    .text-contact {
+        h1 {
+            color: #6d33ff;
+        }
+    }
+
+    ul {
+        padding: 0;
+        margin: 20 0;
+
+        .contact-text {
+            color: #6d33ff;
+        }
+
+        li {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            margin-bottom: 10px;
+            overflow: hidden;
+            display: block;
+            position: relative;
+            opacity: 0;
+            animation: forwards fadeInUp 2s 1s;
+
+            input {
+                border: none;
+                outline: none;
+                background-color: #4d4d4e;
+                color: #aaaaaa;
+                height: 50px;
+                padding: 0 20px;
+            }
+        }
+
+        .subject {
+            input {
+                width: 645px;
+            }
+        }
+
+        .half {
+            display: flex;
+
+            li {
+                margin-right: 5px;
+
+                input {
+                    width: 300px;
+                }
+            }
+        }
+
+        textarea {
+            width: 645px;
+            height: 400px;
+            background-color: #4d4d4e;
+            color: #aaaaaa;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 10px 20px;
+        }
+
+        .send-button {
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: #6d33ff;
+            color: #181818;
+            font-weight: bold;
+
+            &:hover {
+                background-color: #4d4d4e;
+                color: #dddddd;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .tags {
+        display: none;
+    }
+}
