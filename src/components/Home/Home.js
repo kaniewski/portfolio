@@ -13,7 +13,6 @@ const Home = () => {
                 </h1>
                 <h2>/ junior</h2>
                 <Link className='flat-button' to="/contact">Contact me</Link>
-                
             </div>
             <h3>K</h3>
         </div>
