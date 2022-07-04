@@ -24,9 +24,12 @@
 }
 
 .bottom-tags {
-    bottom: 50px;
+    bottom: -200px;
+    z-index: -5;
 }
 
 .bottom-tag-html {
     left: 75px;
+    bottom: -250px;
+    z-index: -5;
 }
